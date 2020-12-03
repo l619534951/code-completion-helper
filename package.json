@@ -1,0 +1,17 @@
+{
+  "name": "code-completion-helper",
+  "version": "2.0.0-rc.2",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "generate": "node -r esm src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ant-design-vue": "^2.0.0-rc.2",
+    "esm": "^3.2.25",
+    "vue": "^3.0.4"
+  }
+}
