@@ -12,6 +12,7 @@
   "dependencies": {
     "ant-design-vue": "^2.0.0-rc.2",
     "esm": "^3.2.25",
+    "rimraf": "^3.0.2",
     "vue": "^3.0.4"
   }
 }
