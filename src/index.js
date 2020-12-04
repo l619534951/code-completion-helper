@@ -21,6 +21,7 @@ Antd.install(fakeVue)
 
 function createWebTypes() {
   const getAttributes = componentProps => {
+    console.log(componentProps)
     const attributes = []
     for (let propName in componentProps) {
       let type = 'string'
@@ -51,19 +52,19 @@ function createWebTypes() {
     }
     return attributes
   }
-  
+
   const createTag = component => {
     // 只包含属性名称
     const attributes = getAttributes(component.props)
-    
+
     return {
       name: component.name,
       attributes: attributes
     }
   }
-  
+
   const tags = components.map(createTag)
-  
+
   const webTypes = {
     $schema: 'http://json.schemastore.org/web-types',
     framework: 'vue',
@@ -77,7 +78,7 @@ function createWebTypes() {
       },
     },
   }
-  
+
   writeJsonFile(webTypes, 'dist/web-types.json')
 }
 rimraf.sync(resolve('./dist'))
